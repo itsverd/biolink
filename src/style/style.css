@@ -40,6 +40,10 @@ body {
   /* overflow-x: hidden; */
 }
 
+@font-face {
+    font-family: "Bahnschrift";
+    src: url("src/font/Bahnschrift.ttf") format("ttf"),
+    }
 
 a {
     text-decoration: none; 
