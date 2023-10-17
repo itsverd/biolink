@@ -57,7 +57,7 @@ a {
     z-index: 500;
     top: 0;
     margin: 0;
-    margin-inline: 15px;
+  
     width: 100%;
     /* background-color: #00a651; */
     background: rgba(255,255,255, 0.05);
