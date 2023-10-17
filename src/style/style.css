@@ -1,0 +1,277 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary:  #00a651;
+  --secondary: #011627;
+  --white: #fdfffc;
+}
+ 
+/* ::selection {
+  background-color: var(--primary);
+  color: #00245f;
+} */
+
+html{
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary);
+  color: var(--white);
+
+  background-image: url("/src/image/bg-01.png");
+ 
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* overflow-x: hidden; */
+}
+
+
+a {
+    text-decoration: none; 
+    color: inherit;
+  }
+
+.nav-container{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    z-index: 500;
+    top: 0;
+    margin: 0;
+    margin-right: 15px;
+    width: 100%;
+    /* background-color: #00a651; */
+    background: rgba(255,255,255, 0.05);
+    /* background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255,0)); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    padding: 10px 20px;
+    box-shadow: 0 1px 15px 0 rgba(0, 0, 0, 0.24);
+
+    animation: navMuncul 300ms ease-in-out;
+}
+
+.nav-container nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 90%;
+    max-width: 1080px;
+}
+
+.nav-container .nav-social{
+    display: flex;
+    gap: .6rem;
+}
+
+.nav-container .nav-social i{
+    font-size: 1.2rem;
+}
+
+.nav-container .nav-logo img{
+    width: 120px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+@keyframes navMuncul {
+    from{
+        opacity: 0;
+        transform: translateY(-4rem);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+span.verd{
+    font-family: 'Bahnschrift';
+}
+
+.logo-icon{
+    display: flex;
+    justify-content: center;
+    /* background-color: #00245f; */
+    margin-top: 80px;
+}
+
+.logo-icon img{
+    width: 120px;
+    border-radius: 100%;
+}
+
+.interface{
+    display: flex;
+    margin-block: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.identitas{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 520px;
+    text-align: center;
+    margin-inline: 15px;
+
+    margin-bottom: 40px;
+    color: var(--white);
+
+}
+
+.identitas h1{
+    margin: 0;
+    font-size: 36px;
+    font-family: 'Bahnschrift';
+}
+
+.identitas p{
+    margin: 0;
+    margin-top: 10px;
+}
+
+.identitas .social-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.identitas .social-icon i:hover{
+    font-size: 1.6rem;
+}
+
+ul.sosmed{
+    width: 80%;
+    max-width: 520px;
+}
+
+.sosmed li{
+    list-style: none;
+}
+
+.sosmed li:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.link-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #213447;
+    padding: 0.6rem;
+    border-radius: 10px;
+
+    box-shadow: 8px 8px 0 #000f1f;
+}
+
+
+.link-card:hover{
+    border: solid 1px var(--white);
+}
+
+.link-card p{
+    margin: 0;
+    color: var(--white);
+}
+
+.link-card .link-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(to top, var(--primary), cyan);
+    padding: 0.5rem;
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    color: var(--secondary);
+}
+
+.link-card .link-action{
+    color: #8080a3;
+    cursor: pointer;
+
+    font-size: 1.1rem;
+}
+
+.copyright{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 100px;
+    font-size: 0.75rem;
+    gap: .7rem;
+}
+
+.copyright p{
+    margin-bottom: 20px;
+}
+
+.copyright img{
+    width: 50px;
+    opacity: 0.5;
+}
+
+#toast{
+    width: max-content;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+.toast-container{
+    top: 0;
+    background-color: var(--white);
+    color: var(--secondary);
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 6px;
+    animation: muncul 300ms ease-in-out;
+}
+
+.toast-hidden{
+    animation: hilang 1s ease-in-out 1s;
+}
+
+@keyframes muncul {
+    from{
+        opacity: 0;
+        transform: translateY(-4rem);
+    } to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes hilang {
+    from{
+        opacity: 1;
+    } to{
+        opacity: 0;
+    }
+}
