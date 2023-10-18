@@ -39,6 +39,9 @@ body {
   color: var(--white);
 
   background-image: url("/src/image/bg-01.png");
+  background-repeat: repeat;
+  background-size: cover;
+  background-position: center;
  
   /* display: flex; */
   /* flex-direction: column; */
