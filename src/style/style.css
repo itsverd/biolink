@@ -187,6 +187,11 @@ ul.sosmed{
     list-style: none;
 }
 
+ul.sosmed p{
+    margin-inline: 10px;
+    text-align: center;
+}
+
 .sosmed li:not(:last-child){
     margin-bottom: 10px;
 }
