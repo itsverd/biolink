@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Bahnschrift";
+    src: url("src/font/Bahnschrift.ttf") format("truetype"),
+    }
+
 *, *::before, *::after {
     padding: 0;
     margin: 0;
@@ -10,10 +15,10 @@
   --white: #fdfffc;
 }
  
-/* ::selection {
+::selection {
   background-color: var(--primary);
-  color: #00245f;
-} */
+  color: var(--white);
+}
 
 html{
   scroll-behavior: smooth;
@@ -39,11 +44,6 @@ body {
   /* flex-direction: column; */
   /* overflow-x: hidden; */
 }
-
-@font-face {
-    font-family: "Bahnschrift";
-    src: url("src/font/Bahnschrift.ttf") format("ttf"),
-    }
 
 a {
     text-decoration: none; 
