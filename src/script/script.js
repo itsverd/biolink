@@ -9,7 +9,7 @@ actionLink.forEach((action) => {
 
         document.getElementById('toast').innerHTML = `
         <div class="toast-container">
-        <p>✅ Link berhasil disalin</p>
+        <p>Tautan berhasil disalin</p>
         </div>
         `;
         
