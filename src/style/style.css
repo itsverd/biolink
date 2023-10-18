@@ -199,7 +199,7 @@ ul.sosmed p{
 .link-card{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #213447;
     padding: 0.6rem;
     border-radius: 10px;
