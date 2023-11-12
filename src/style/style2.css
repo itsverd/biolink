@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro');
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+box-sizing: border-box;
+}
+
+:root {
+--primary:  #00a651;
+--secondary: #011627;
+--white: #fdfffc;
+}
+
+::selection {
+background-color: var(--primary);
+color: var(--white);
+}
+
+html{
+scroll-behavior: smooth;
+overflow-x: hidden;
+word-wrap: break-word;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Source Code Pro', 'Lato', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary);
+  color: var(--white);
+  
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+div.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    height: 100vh;
+    width: 100%;
+    padding: 30px;
+
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* div.main span{
+    font-family: 'Lato';
+    text-transform: uppercase;
+    background-color: var(--primary);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+} */
+
+div.main button{
+    cursor: pointer;
+    font-size: .8rem;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 1px solid var(--primary);
+    border-radius: 6px;
+    background-color: transparent;
+    color: var(--primary);
+    transition: .3s ease-in-out;
+}
+
+div.main button:hover{
+    color: var(--white);
+    background-color: var(--primary);
+}
