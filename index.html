@@ -29,8 +29,8 @@
     <meta property="og:image:height" content="627"/>
     <meta property="og:type" content="website"/> 
     
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
@@ -43,7 +43,53 @@
         "https://www.linkedin.com/in/perdiyansyah",
         "https://github.com/itsverd",
         "https://trakteer.id/verD"
-      ]
+      ],
+      "image": "src/image/thumb-01.png"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://itsverd.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://itsverd.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https://itsverd.com/",
+          "name": "Home"
+        }
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@id": "https://bio.itsverd.com/",
+          "name": "About"
+        }
+      }]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "name": "verD",
+      "url": "https://itsverd.com/",
+      "logo": "src/image/VD logo_Horizontal.png"
     }
     </script>
     
