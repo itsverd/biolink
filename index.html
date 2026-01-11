@@ -7,10 +7,8 @@
     <meta name="description" content="Hello! I am Perdiyansyah also known as verD, a frontend web developer and logo designer from Indonesia.">
     <meta name="keywords" content="verD, Perdiyansyah, Pepenk RKT, PepenkRKT, Programmer, Designer, Indonesia">
     
-    <!-- Canonical link -->
     <link rel="canonical" href="https://itsverd.com/">
     
-    <!-- Favicon and Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="src/image/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="src/image/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="src/image/favicon-16x16.png">
@@ -20,7 +18,6 @@
     <meta name="msapplication-config" content="src/image/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="verD">
     <meta property="og:image" content="src/image/thumb-01.png"/>
     <meta property="og:description" content="a Web Developer and Logo Designer"/>
@@ -29,8 +26,7 @@
     <meta property="og:image:height" content="627"/>
     <meta property="og:type" content="website"/> 
     
-  <!-- Schema.org Markup -->
-  <script type="application/ld+json">
+    <script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "Person",
@@ -95,6 +91,89 @@
     
     <link rel="stylesheet" href="src/style/style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <style>
+        /* Loading State Styles */
+        .sosmed {
+            min-height: 200px;
+            position: relative;
+        }
+        
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            gap: 15px;
+        }
+        
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-top-color: #4CAF50;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .error-container {
+            padding: 20px;
+            text-align: center;
+            color: #d32f2f;
+        }
+        
+        .error-message {
+            margin-bottom: 15px;
+        }
+        
+        .retry-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .retry-button:hover {
+            background-color: #45a049;
+        }
+        
+        .link-card {
+            opacity: 0;
+            animation: fadeInUp 0.5s forwards;
+        }
+        
+        .link-card:nth-child(1) { animation-delay: 0.1s; }
+        .link-card:nth-child(2) { animation-delay: 0.2s; }
+        .link-card:nth-child(3) { animation-delay: 0.3s; }
+        .link-card:nth-child(4) { animation-delay: 0.4s; }
+        .link-card:nth-child(5) { animation-delay: 0.5s; }
+        .link-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -113,7 +192,7 @@
                 <a href="https://twitter.com/itsvDe" title="Twitter">
                     <i class="ph-thin ph-twitter-logo"></i>
                 </a>
-                <a href="httpd://linkedin.com/in/perdiyansyah" title="Linkedin">
+                <a href="https://linkedin.com/in/perdiyansyah" title="Linkedin">
                     <i class="ph-thin ph-linkedin-logo"></i>
                 </a>
                 <a href="https://github.com/itsverd" title="Github">
@@ -145,94 +224,18 @@
                 <a href="https://github.com/itsverd" title="Github">
                     <i class="ph-thin ph-github-logo"></i>
                 </a>
-                <a href="https://to.itsverd.com/donate" title="Donate">
+                <!-- <a href="https://to.itsverd.com/donate" title="Donate">
                     <i class="ph-thin ph-hand-coins"></i>
-                </a>
+                </a> -->
             </div>
         </div>
 
-        <ul class="sosmed">
-            <li>
-                <a href="https://itsverd.com" target="_blank" class="link-card" title="Temukan saya di Website">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-globe"></i>
-                    </div>
-                    <p>Website</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
-            
-            <li>
-                <a href="https://itsverd.com/commission" target="_blank" class="link-card" title="Temukan saya di Website">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-fire"></i>
-                    </div>
-                    <p>Commission</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
-
-            <!-- <li>
-                <a href="https://bio.itsverd.com/product" class="link-card" title="Cari produk yang membuatmu tertarik">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-shopping-cart"></i>
-                    </div>
-                    <p>Shopping Cart</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li> -->
-
-            <li>
-                <a href="https://itsverd.com/project" target="_blank" class="link-card" title="Design Portfolio">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-images-square"></i>
-                    </div>
-                    <p>Portfolio</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="mailto:halo@itsverd.com" target="_blank" class="link-card" title="Let's Talk!">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-phone"></i>
-                    </div>
-                    <p>Let's Talk!</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="https://to.itsverd.com/donate" target="_blank" class="link-card" title="Let's Talk!">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-hand-coins"></i>
-                    </div>
-                    <p>Support Me</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
-
-            <li>
-                <a href="https://blog.itsverd.com/" target="_blank" class="link-card" title="Blog">
-                    <div class="link-icon">
-                        <i class="ph-fill ph-pencil-simple"></i>
-                    </div>
-                    <p>Blog</p>
-                    <div class="link-action">
-                        <i class="ph-duotone ph-copy"></i>
-                    </div>
-                </a>
-            </li>
+        <ul class="sosmed" id="linkList">
+            <!-- Loading state -->
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Loading links...</p>
+            </div>
         </ul>
         
     </div>
@@ -242,11 +245,86 @@
         <p>&copy; <script>document.write(new Date().getFullYear())</script> <a href="//itsverd.com">verD</a> - All Rights Reserved</p>
     </div>
 
-    <!-- Toast Notification -->
-    <div id="toast">
-        <!-- Your toast container goes here -->
-    </div>
+    <div id="toast"></div>
 
     <script src="src/script/script.js"></script>
+    
+    <script>
+        // API Configuration
+        const API_URL = 'https://api.itsvde.com/';
+        
+        // Fetch bio links from API
+        async function fetchBioLinks() {
+            const linkListElement = document.getElementById('linkList');
+            
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data: 'bioLink'
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const result = await response.json();
+                
+                if (result.success && result.data && result.data.length > 0) {
+                    renderLinks(result.data);
+                } else {
+                    showError('No links found');
+                }
+                
+            } catch (error) {
+                console.error('Error fetching bio links:', error);
+                showError('Failed to load links. Please try again.');
+            }
+        }
+        
+        // Render links to the page
+        function renderLinks(links) {
+            const linkListElement = document.getElementById('linkList');
+            linkListElement.innerHTML = '';
+            
+            links.forEach((link, index) => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <a href="${link.URL}" target="_blank" class="link-card" title="${link.Name}">
+                        <div class="link-icon">
+                            <i class="${link.Icon}"></i>
+                        </div>
+                        <p>${link.Name}</p>
+                        <div class="link-action">
+                            <i class="ph-duotone ph-copy"></i>
+                        </div>
+                    </a>
+                `;
+                linkListElement.appendChild(li);
+            });
+        }
+        
+        // Show error message with retry button
+        function showError(message) {
+            const linkListElement = document.getElementById('linkList');
+            linkListElement.innerHTML = `
+                <div class="error-container">
+                    <p class="error-message">${message}</p>
+                    <button class="retry-button" onclick="fetchBioLinks()">
+                        <i class="ph-bold ph-arrow-clockwise"></i> Retry
+                    </button>
+                </div>
+            `;
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            fetchBioLinks();
+        });
+    </script>
 </body>
 </html>
